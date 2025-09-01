@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclave Virtual - Eleição do Papa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CONCLAVE VIRTUAL</h1>
+            <h2>Eleição do Papa</h2>
+            <p>O cardeal é eleito se alcançar dois terços dos votos</p>
+        </header>
+
+        <main>
+            <section id="cadastro-section" class="section active">
+                <h3>Cadastro dos Cardeais</h3>
+                <p>Digite os nomes dos 5 cardeais:</p>
+                <div id="cadastro-form">
+                    <div class="input-group">
+                        <label for="cardeal1">Cardeal 1:</label>
+                        <input type="text" id="cardeal1" class="cardeal-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardeal2">Cardeal 2:</label>
+                        <input type="text" id="cardeal2" class="cardeal-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardeal3">Cardeal 3:</label>
+                        <input type="text" id="cardeal3" class="cardeal-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardeal4">Cardeal 4:</label>
+                        <input type="text" id="cardeal4" class="cardeal-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardeal5">Cardeal 5:</label>
+                        <input type="text" id="cardeal5" class="cardeal-input" required>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <p><strong>Instruções:</strong> Preencha todos os campos para habilitar o botão de iniciar votação.</p>
+                </div>
+                <button id="iniciar-btn" class="btn-primary" disabled>Iniciar Votação</button>
+            </section>
+
+            <section id="votacao-section" class="section">
+                <h3>Votação</h3>
+                <p>Selecione o cardeal que deseja votar:</p>
+                <div id="opcoes-votacao" class="cardeais-list"></div>
+                <div class="info-box">
+                    <p><strong>Como votar:</strong> Clique em um cardeal para selecioná-lo e depois clique em "Votar".</p>
+                    <p>Após todos os votos serem computados, clique em "Encerrar Votação" para ver os resultados.</p>
+                </div>
+                <div class="botoes-votacao">
+                    <button id="votar-btn" class="btn-primary">Votar</button>
+                    <button id="encerrar-btn" class="btn-secondary">Encerrar Votação</button>
+                </div>
+            </section>
+
+            <section id="resultado-section" class="section">
+                <h3>Resultado da Votação</h3>
+                <div id="resultado-container"></div>
+                <div class="botoes-votacao">
+                    <button id="nova-votacao-btn" class="btn-primary">Nova Rodada de Votação</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SOFTEX - PERNAMBUCO</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
